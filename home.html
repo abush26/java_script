@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>College Website</title>
+    <style>
+        /* Add your CSS styles here */
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to the College Department</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#courses">Courses</a></li>
+            <!-- Add more links as needed -->
+        </ul>
+    </nav>
+
+    <section id="about">
+        <h2>About Our Department</h2>
+        <p>This is the department's homepage. We offer various courses and services.</p>
+    </section>
+
+    <section id="courses">
+        <h2>Our Courses</h2>
+        <ul>
+            <li>Course 1</li>
+            <li>Course 2</li>
+            <!-- Add more courses -->
+        </ul>
+    </section>
+
+    <section>
+        <h2>Marquee</h2>
+        <marquee behavior="scroll" direction="left">This is a scrolling marquee.</marquee>
+    </section>
+
+    <section>
+        <h2>HTML Formatting</h2>
+        <p><strong>Bold Text</strong> and <em>Italic Text</em></p>
+    </section>
+
+    <section>
+        <h2>Frames and iframe</h2>
+        <frameset cols="20%, 80%">
+            <frame name="links" src="links.html">
+            <frame name="content" src="content.html">
+        </frameset>
+        <iframe src="https://www.example.com"></iframe>
+    </section>
+
+    <section>
+        <h2>Course Timetable</h2>
+        <table>
+            <tr>
+                <th>Time</th>
+                <th>Monday</th>
+                <th>Tuesday</th>
+                <th>Wednesday</th>
+                <th>Thursday</th>
+                <th>Friday</th>
+            </tr>
+            <tr>
+                <td>8:00 AM</td>
+                <td>Math</td>
+                <td>Science</td>
+                <td>English</td>
+                <td>History</td>
+                <td>PE</td>
+            </tr>
+            <!-- Add more rows as needed -->
+        </table>
+    </section>
+
+    <section>
+        <h2>Admission Form</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br>
+            <label for="course">Select a course:</label>
+            <select id="course" name="course">
+                <option value="math">Math</option>
+                <option value="science">Science</option>
+                <!-- Add more options -->
+            </select><br>
+            <label>Choose your interests:</label><br>
+            <input type="checkbox" id="interest1" name="interest1" value="programming">
+            <label for="interest1">Programming</label><br>
+            <input type="checkbox" id="interest2" name="interest2" value="design">
+            <label for="interest2">Design</label><br>
+            <label>Gender:</label><br>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label><br>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label><br>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </form>
+    </section>
+
+    <section>
+        <h2>JavaScript Programs</h2>
+        <p>Current Date and Time: <span id="dateTime"></span></p>
+        <p>Removed Character: <span id="removedChar"></span></p>
+        <p>Changed Case: <span id="changedCase"></span></p>
+        <p>Sum of Numbers: <span id="sumNumbers"></span></p>
+        <p>Full Name: <span id="fullName"></span></p>
+        <button onclick="displayDateTime()">Display Current Date and Time</button>
+        <button onclick="displayRemovedChar()">Remove Character</button>
+        <button onclick="changeStringCase()">Change Case</button>
+        <button onclick="calculateSum()">Calculate Sum</button>
+        <button onclick="displayFullName()">Display Full Name</button>
+    </section>
+
+    <section>
+        <h2>PHP Script</h2>
+        <?php
+        $str = "This is a test string with spaces.";
+        $str = str_replace(' ', '', $str);
+        echo "String after removing spaces: " . $str;
+        ?>
+    </section>
+
+    <section>
+        <h2>PHP Login Script</h2>
+        <!-- Add your PHP code for the login system here -->
+    </section>
+
+    <section>
+        <h2>Birthday Countdown</h2>
+        <p>Birthday Countdown: <span id="countdown"></span> days</p>
+    </section>
+
+    <script>
+        // JavaScript code for various tasks
+
+        // Display current date and time
+        function displayDateTime() {
+            const now = new Date();
+            document.getElementById("dateTime").innerText = now.toLocaleString();
+        }
+
+        // Remove a character at a specified position
+        function displayRemovedChar() {
+            const str = "Example String";
+            const index = 7;
+            const newStr = str.slice(0, index) + str.slice(index + 1);
+            document.getElementById("removedChar").innerText = newStr;
+        }
+
+        // Change case of a string
+        function changeStringCase() {
+            const str = "Change My Case";
+            const upperCase = str.toUpperCase();
+            const lowerCase = str.toLowerCase();
+            document.getElementById("changedCase").innerText = `Uppercase: ${upperCase}, Lowercase: ${lowerCase}`;
+        }
+
+        // Calculate the sum of numbers
+        function calculateSum() {
+            const numbers = [1, 2, 3, 4, 5];
+            const sum = numbers.reduce((total, num) => total + num, 0);
+            document.getElementById("sumNumbers").innerText = sum;
+        }
+
+        
+        </script>
+</body>
+
